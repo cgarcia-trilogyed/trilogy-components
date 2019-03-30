@@ -1,10 +1,10 @@
 {
-  "name": "trilogycorecomponents",
+  "name": "trilogycomponents",
   "version": "1.0.0",
   "description": "Trilogy core React components",
   "main": "core/index.js",
   "types": "core/index.d.ts",
-  "repository": "https://github.com/cgarcia-trilogyed/CoreReactApp",
+  "repository": "https://github.com/Harrison1/trilogy-components",
   "author": "Trilogy Team",
   "license": "MIT",
   "keywords": [

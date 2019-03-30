@@ -18,6 +18,8 @@ Upgrade to latest LTS version of Node.js for best experience
 #### Spin up Storybook
 `npm run storybook` or `yarn storybook`
 
+Storybook will be on `localhost:6006`
+
 #### Format code with Prettier
 `npm run format` or `yarn format`
 
