@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from '../../utils/styled-components';
+import styled from '../utils/styled-components';
 
 type ButtonType = 'button' | 'reset' | 'submit' | undefined;
 

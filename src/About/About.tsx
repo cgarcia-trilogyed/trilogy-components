@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { throttle } from 'lodash/fp';
-import styled from '../../utils/styled-components';
-import { device } from '../../utils/sizes';
+import styled from '../utils/styled-components';
+import { device } from '../utils/sizes';
 
 export interface AboutProps {
   backgroundImg?: string;

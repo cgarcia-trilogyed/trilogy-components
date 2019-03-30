@@ -1,6 +1,6 @@
 import * as React from 'react';
-import styled from '../../utils/styled-components';
-import { device } from '../../utils/sizes';
+import styled from '../utils/styled-components';
+import { device } from '../utils/sizes';
 
 export interface ContentProps {
   title?: string;
