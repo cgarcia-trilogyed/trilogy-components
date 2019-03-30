@@ -3,6 +3,7 @@ import { boolean, withKnobs, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import ImageText from '.';
 import List from '../List';
+import SectionTitle from '../SectionTitle'
 
 const stories = storiesOf('Image Text', module);
 
@@ -17,16 +18,19 @@ const ulList = `<ul>
   </ul>`;
 
 stories.add('Default', () => (
-  <ImageText
-    alt="A picture is worth a thousand words"
-    src="https://bootcamp.cvn.columbia.edu/wp-content/uploads/sites/99/2019/02/become.jpg"
-    title="Become a Web Developer—from Anywhere"
-    subtitle="Why join our program?"
-    imageRight={boolean('Image Right', false)}
-    content={<List listHTML={ulList} />}
-    dskColumWidth={text(
-      'Column Widths (example 50% or 40% 60% or 33% 33% 33%)',
-      '40% 60%'
-    )}
-  />
+  <>
+    <SectionTitle text='Image With a List of Items' bold />
+    <ImageText
+      alt="A picture is worth a thousand words"
+      src="https://bootcamp.cvn.columbia.edu/wp-content/uploads/sites/99/2019/02/become.jpg"
+      title="Become a Web Developer—from Anywhere"
+      subtitle="Why join our program?"
+      imageRight={boolean('Image Right', false)}
+      content={<List listHTML={ulList} />}
+      dskColumWidth={text(
+        'Column Widths (example 50% or 40% 60% or 33% 33% 33%)',
+        '40% 60%'
+      )}
+    />
+  </>
 ));

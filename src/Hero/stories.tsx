@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import Hero from '.';
 import HeroContent from '../HeroContent';
 import FooterContent from '../FooterContent';
+import SectionTitle from '../SectionTitle'
 
 const stories = storiesOf('Hero', module);
 
@@ -12,7 +13,7 @@ stories.addDecorator(withKnobs);
 stories
   .add('Default Landing Hero', () => (
     <>
-      <h1>Landing Hero</h1>
+      <SectionTitle text='Landing Page Hero' bold />
       {/* TODO: docs go here */}
       <Hero
         backgroundImg={text(
@@ -35,7 +36,7 @@ stories
   ))
   .add('Footer Form', () => (
     <>
-      <h1>Footer Form</h1>
+      <SectionTitle text='Landing Page Footer Form' bold />
       {/* TODO: docs go here */}
       <Hero
         backgroundImg={text(

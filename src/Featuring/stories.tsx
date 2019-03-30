@@ -2,6 +2,7 @@ import * as React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import Featuring from '.';
+import SectionTitle from '../SectionTitle'
 
 const stories = storiesOf('Featuring', module);
 
@@ -46,4 +47,9 @@ const fList = [
   }
 ];
 
-stories.add('Default', () => <Featuring content={fList} />);
+stories.add('Default', () => (
+  <>
+    <SectionTitle text='Featuring Section' bold />
+    <Featuring content={fList} />
+  </>
+));

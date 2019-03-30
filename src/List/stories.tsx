@@ -2,6 +2,7 @@ import * as React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import List from '.';
+import SectionTitle from '../SectionTitle'
 
 const stories = storiesOf('List', module);
 
@@ -17,4 +18,9 @@ const ulList = `<ul>
     </li>
   </ul>`;
 
-stories.add('Default', () => <List listHTML={ulList} />);
+stories.add('Default', () => (
+    <>
+      <SectionTitle text='List' bold />
+      <List listHTML={ulList} />
+    </>
+  ));

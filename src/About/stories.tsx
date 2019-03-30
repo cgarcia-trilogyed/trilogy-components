@@ -2,6 +2,7 @@ import * as React from 'react';
 import { boolean, color, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import About from '.';
+import SectionTitle from '../SectionTitle'
 
 const stories = storiesOf('About', module);
 
@@ -9,7 +10,7 @@ stories.addDecorator(withKnobs);
 
 stories.add('Default', () => (
   <>
-    <h1>Landing Hero</h1>
+    <SectionTitle text='About Section' bold />
     {/* TODO: docs go here */}
     <About
       backgroundImg={text(
