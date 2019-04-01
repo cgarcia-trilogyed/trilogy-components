@@ -49,12 +49,13 @@ const TitleContent = styled.div`
     font-size: 20px;
   }
   h2 {
-    font-size: 50px;
+    font-size: 48px;
     font-weight: 700;
     margin: 5px 0;
+    line-height: 60px;
   }
   p {
-    font-weight: 20px;
+    font-size: 18px;
   }
   @media ${device.laptop} {
     text-align: right;

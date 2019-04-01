@@ -103,29 +103,17 @@ export const SSForm = (props: FormProps) => {
   }
 
   const handleFNChange = (e: React.FormEvent<HTMLInputElement>): void => {
-    if(e.currentTarget.value.trim() !== '') { 
-      setErrorMessage('') 
-    } else {
-      setErrorMessage('Please enter a first name')
-    }
+    setErrorMessage('') 
     setFirstName(e.currentTarget.value.trim())
   }
 
   const handleLNChange = (e: React.FormEvent<HTMLInputElement>): void => {
-    if(e.currentTarget.value.trim() !== '') { 
-      setErrorMessage('') 
-    } else {
-      setErrorMessage('Please enter a last name')
-    }
+    setErrorMessage('') 
     setLastName(e.currentTarget.value.trim())
   }
 
   const handleEmailChange = (e: React.FormEvent<HTMLInputElement>): void => {
-    if(e.currentTarget.value.trim() !== '') { 
-      setErrorMessage('') 
-    } else {
-      setErrorMessage('Please enter a valid email')
-    }
+    setErrorMessage('')
     setEmail(e.currentTarget.value.trim())
   }
   
