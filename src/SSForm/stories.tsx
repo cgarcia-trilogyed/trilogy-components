@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import SSForm from '.';
 import SectionTitle from '../SectionTitle'
 
-const stories = storiesOf('Form', module);
+const stories = storiesOf('SS Form', module);
 
 stories.addDecorator(withKnobs);
 

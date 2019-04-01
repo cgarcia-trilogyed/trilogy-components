@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from '../utils/styled-components';
 import { device } from '../utils/sizes';
+import SSForm from '../SSForm'
 
 export interface ContentProps {
   title?: string;
@@ -9,6 +10,7 @@ export interface ContentProps {
 }
 
 const Container = styled.div`
+  align-items: center;
   display: grid;
   grid-template-areas: 'content' 'form';
   margin-left: auto;
@@ -23,19 +25,19 @@ const Container = styled.div`
 `;
 
 /* font family from tailwind css by Adam Wathan https://tailwindcss.com/docs/fonts*/
-const Form = styled.div`
-  align-items: center;
-  background: #fff;
-  border-radius: 10px;
-  display: flex;
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  grid-area: form;
-  justify-content: center;
-  max-width: 400px;
-  text-align: center;
-  width: 100%;
-`;
+// const Form = styled.div`
+//   align-items: center;
+//   background: #fff;
+//   border-radius: 10px;
+//   display: flex;
+//   font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
+//     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+//   grid-area: form;
+//   justify-content: center;
+//   max-width: 400px;
+//   text-align: center;
+//   width: 100%;
+// `;
 /* font family from tailwind css by Adam Wathan https://tailwindcss.com/docs/fonts*/
 const TitleContent = styled.div`
   color: #fff;
@@ -49,6 +51,7 @@ const TitleContent = styled.div`
   h2 {
     font-size: 50px;
     font-weight: 700;
+    margin: 5px 0;
   }
   p {
     font-weight: 20px;
@@ -60,7 +63,7 @@ const TitleContent = styled.div`
 
 export const HeroContent = (props: ContentProps) => (
   <Container>
-    <Form>FORM GOES HERE</Form>
+    <SSForm />>
     <TitleContent>
       <h1>{props.title}</h1>
       <h2>{props.leadText}</h2>
