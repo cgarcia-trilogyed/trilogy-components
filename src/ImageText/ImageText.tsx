@@ -27,8 +27,8 @@ const Container = styled(`div`)<ITProps>`
     grid-template-columns: ${props =>
       props.dskColumWidth ? props.dskColumWidth : `50%`};
     ${props => (props.imageRight ? `justify-content: space-between;` : null)}
+    ${props => (props.imageRight ? `justify-items: end;;` : null)}
   }
-  grid-template-rows: 6rem auto;
   h2 {
     margin-bottom: 0;
   }
