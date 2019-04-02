@@ -28,6 +28,10 @@ const Container = styled(`div`)<ITProps>`
       props.dskColumWidth ? props.dskColumWidth : `50%`};
     ${props => (props.imageRight ? `justify-content: space-between;` : null)}
   }
+  grid-template-rows: 6rem auto;
+  h2 {
+    margin-bottom: 0;
+  }
 `;
 
 const Image = styled(`img`)<ITProps>`

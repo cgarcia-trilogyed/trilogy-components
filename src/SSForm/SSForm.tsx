@@ -13,10 +13,11 @@ const SSFContainer = styled.div`
   border: 1px solid #333;
   max-width: 400px;
   width: 100%;
-  label {
-    position: absolute!important;
+`
+
+const HiddenLabel = styled.label `
+    position: absolute;
     clip: rect(1px,1px,1px,1px);
-  }
 `
 
 const Title = styled.h2`
@@ -135,23 +136,23 @@ export const SSForm = (props: FormProps) => {
       </Title> 
       <Form>
         {(count === 0) 
-          ? <><label htmlFor='firstName'>First Name</label>
+          ? <><HiddenLabel htmlFor='firstName'>First Name</HiddenLabel>
             <Input type='text' name='firstName' id='firstName' placeholder='First Name' value={firstName} onChange={ handleFNChange } autoFocus required /></>
           : null
         }
         {(count === 1) 
-          ? <><label htmlFor='lastName'>Last Name</label>
+          ? <><HiddenLabel htmlFor='lastName'>Last Name</HiddenLabel>
             <Input type='text' name='lastName' id='lastName' placeholder='Last Name' value={lastName} onChange={ handleLNChange } autoFocus required /></>
           : null
         }
         {(count === 2) 
-          ? <><label htmlFor='email'>Email</label>
+          ? <><HiddenLabel htmlFor='email'>Email</HiddenLabel>
             <Input type='email' name='email' id='email' placeholder='Email' value={email} onChange={ handleEmailChange } autoFocus required /></>
           : null
         }
         {(count === 3)
-          ? <><label htmlFor='termsAndConditions'>Terms and Conditions</label>
-            <input name='termsAndConditions' id='termsAndConditions' type='checkbox' /><p>By checking this box, I consent to be contacted by or on behalf of Trilogy Education Services, Inc. and Columbia University, including by email or autodialed calls and text messages to any telephone number I provide, about my interest in furthering my career training. I understand my consent is not required to purchase or enroll. I also agree to the Terms of Use and Privacy Policy.</p></>
+          ? <><label htmlFor='termsAndConditions'>
+            <input name='termsAndConditions' id='termsAndConditions' type='checkbox' />By checking this box, I consent to be contacted by or on behalf of Trilogy Education Services, Inc. and Columbia University, including by email or autodialed calls and text messages to any telephone number I provide, about my interest in furthering my career training. I understand my consent is not required to purchase or enroll. I also agree to the Terms of Use and Privacy Policy.</label></>
           : null
         }
         {(count === 4) 
@@ -159,28 +160,31 @@ export const SSForm = (props: FormProps) => {
           : null
         }
         <ErrorMessage>{ errorMessage }</ErrorMessage>
-        <ButtonContainer count={ count } >
-          {(count > 0)
-            ?  <Button
-                background='#000000'
-                fontColor='#ffffff'
+        {(count !== 4) 
+          ? <ButtonContainer count={ count } >
+              {(count > 0)
+                ?  <Button
+                    background='#000000'
+                    fontColor='#ffffff'
+                    bold
+                    type='button'
+                    onClick={ back }
+                  >
+                    BACK
+                  </Button>
+                : null
+              }
+              <Button
+                background='#76acdc'
                 bold
-                type='button'
-                onClick={ back }
+                type='submit'
+                onClick={ next }
               >
-                BACK
+                NEXT
               </Button>
-            : null
-          }
-          <Button
-            background='#76acdc'
-            bold
-            type='submit'
-            onClick={ next }
-          >
-            NEXT
-          </Button>
-        </ButtonContainer>
+            </ButtonContainer>
+          : null
+        }
         <Progress value={ calculateProgress(count) } max="100" />
       </Form>
     </SSFContainer>
