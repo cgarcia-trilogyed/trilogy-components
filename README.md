@@ -26,5 +26,8 @@ Storybook will be on `localhost:6006`
 ## Test
 `npm run test` or `yarn test`
 
-## Build (this will output a core folder of components)
+## Build Storybook docs
+`npm run build-storybook` or `yarn build-storybook`
+
+## Build Core (this will output a core folder of components)
 `npm run build` or `yarn build` or `tsc`

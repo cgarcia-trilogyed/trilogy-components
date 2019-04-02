@@ -62,3 +62,6 @@ typings/
 
 # core folder
 /core
+
+# storybook build is using docs folder
+.out
