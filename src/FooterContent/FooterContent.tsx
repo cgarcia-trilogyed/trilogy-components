@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '../utils/styled-components';
 import { device } from '../utils/sizes';
-import SSForm from '../SSForm'
+import FormContainer from '../FormContainer'
 
 export interface ContentProps {
   leadText?: string;
@@ -55,7 +55,7 @@ const TitleContent = styled.div`
 
 export const FooterContent = (props: ContentProps) => (
   <Container>
-    <SSForm />
+    <FormContainer />
     <TitleContent>
       <h2>{props.leadText}</h2>
       <p>{props.dateText}</p>

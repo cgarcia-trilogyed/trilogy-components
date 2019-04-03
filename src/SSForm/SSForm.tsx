@@ -4,8 +4,20 @@ import GlobalStyles from '../GlobalStyles'
 import Button from '../Button'
 
 export interface FormProps {
-  count?: number;
+  back?: () => void;
+  count: number;
+  firstName?: string;
+  email?: string;
   errorMessage?: string;
+  handleEmailChange?: (e: React.FormEvent<HTMLInputElement>) => void;
+  handleFNChange?: (e: React.FormEvent<HTMLInputElement>) => void;
+  handleLNChange?: (e: React.FormEvent<HTMLInputElement>) => void;
+  lastName?: string;
+  next?: (e: React.FormEvent<HTMLInputElement>) => void;
+}
+
+const calculateProgress = (n: number): string => {
+  return (n/4*100).toString() 
 }
 
 const SSFContainer = styled.div`
@@ -65,128 +77,64 @@ const Progress = styled.progress`
   width: 100%;
 `
 
-export const SSForm = (props: FormProps) => {
-
-  const [count, setCount] = React.useState(0);
-  const [firstName, setFirstName] = React.useState('');
-  const [lastName, setLastName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [errorMessage, setErrorMessage] = React.useState('')
-
-  const next = (e: React.FormEvent<HTMLInputElement>): void => {
-    e.preventDefault()
-    nextCheck(0, firstName, 'Please enter a first name')
-    nextCheck(1, lastName, 'Please enter a last name')
-    nextCheck(2, email, 'Please enter a valid email')
-    if(firstName !== '' && lastName !== '' && email !== '') {
-      setCount(count + 1);
-    }
-  }
-
-  // not a good function, not immutable
-  const nextCheck = (c: number, value: string, message: string): void => {
-    if(count === c) {
-      if(value === '') { 
-        setErrorMessage(message)
-      } else {
-        setErrorMessage('')
-        if(count < 3 && value !== '') { setCount(count + 1) }
+export const SSForm = (props: FormProps) => (
+  <SSFContainer>
+    <GlobalStyles />
+    <Title>
+      GET BOOT CAMP INFO
+    </Title> 
+    <Form>
+      {(props.count === 0) 
+        ? <><HiddenLabel htmlFor='firstName'>First Name</HiddenLabel>
+          <Input type='text' name='firstName' id='firstName' placeholder='First Name' value={props.firstName} onChange={ props.handleFNChange } autoFocus required /></>
+        : null
       }
-    }
-  } 
-
-
-  const back = (): void => {
-    if(count > 0) { 
-      setErrorMessage('')  
-      setCount(count - 1) 
-    }
-  }
-
-  const handleFNChange = (e: React.FormEvent<HTMLInputElement>): void => {
-    setErrorMessage('') 
-    setFirstName(e.currentTarget.value.trim())
-  }
-
-  const handleLNChange = (e: React.FormEvent<HTMLInputElement>): void => {
-    setErrorMessage('') 
-    setLastName(e.currentTarget.value.trim())
-  }
-
-  const handleEmailChange = (e: React.FormEvent<HTMLInputElement>): void => {
-    setErrorMessage('')
-    setEmail(e.currentTarget.value.trim())
-  }
-  
-  const calculateProgress = (n: number): string => {
-    return (n/4*100).toString() 
-  }
-
-  React.useEffect(() => { 
-    console.log(count)
-    console.log(firstName)
-    console.log(lastName) 
-  })
-
-  return (
-    <SSFContainer>
-      <GlobalStyles />
-      <Title>
-        GET BOOT CAMP INFO
-      </Title> 
-      <Form>
-        {(count === 0) 
-          ? <><HiddenLabel htmlFor='firstName'>First Name</HiddenLabel>
-            <Input type='text' name='firstName' id='firstName' placeholder='First Name' value={firstName} onChange={ handleFNChange } autoFocus required /></>
-          : null
-        }
-        {(count === 1) 
-          ? <><HiddenLabel htmlFor='lastName'>Last Name</HiddenLabel>
-            <Input type='text' name='lastName' id='lastName' placeholder='Last Name' value={lastName} onChange={ handleLNChange } autoFocus required /></>
-          : null
-        }
-        {(count === 2) 
-          ? <><HiddenLabel htmlFor='email'>Email</HiddenLabel>
-            <Input type='email' name='email' id='email' placeholder='Email' value={email} onChange={ handleEmailChange } autoFocus required /></>
-          : null
-        }
-        {(count === 3)
-          ? <><label htmlFor='termsAndConditions'>
-            <input name='termsAndConditions' id='termsAndConditions' type='checkbox' />By checking this box, I consent to be contacted by or on behalf of Trilogy Education Services, Inc. and Columbia University, including by email or autodialed calls and text messages to any telephone number I provide, about my interest in furthering my career training. I understand my consent is not required to purchase or enroll. I also agree to the Terms of Use and Privacy Policy.</label></>
-          : null
-        }
-        {(count === 4) 
-          ? <h3>Success</h3>
-          : null
-        }
-        <ErrorMessage>{ errorMessage }</ErrorMessage>
-        {(count !== 4) 
-          ? <ButtonContainer count={ count } >
-              {(count > 0)
-                ?  <Button
-                    background='#000000'
-                    fontColor='#ffffff'
-                    bold
-                    type='button'
-                    onClick={ back }
-                  >
-                    BACK
-                  </Button>
-                : null
-              }
-              <Button
-                background='#76acdc'
-                bold
-                type='submit'
-                onClick={ next }
-              >
-                NEXT
-              </Button>
-            </ButtonContainer>
-          : null
-        }
-        <Progress value={ calculateProgress(count) } max="100" />
-      </Form>
-    </SSFContainer>
-  )
-}
+      {(props.count === 1) 
+        ? <><HiddenLabel htmlFor='lastName'>Last Name</HiddenLabel>
+          <Input type='text' name='lastName' id='lastName' placeholder='Last Name' value={props.lastName} onChange={ props.handleLNChange } autoFocus required /></>
+        : null
+      }
+      {(props.count === 2) 
+        ? <><HiddenLabel htmlFor='email'>Email</HiddenLabel>
+          <Input type='email' name='email' id='email' placeholder='Email' value={props.email} onChange={ props.handleEmailChange } autoFocus required /></>
+        : null
+      }
+      {(props.count === 3)
+        ? <><label htmlFor='termsAndConditions'>
+          <input name='termsAndConditions' id='termsAndConditions' type='checkbox' />By checking this box, I consent to be contacted by or on behalf of Trilogy Education Services, Inc. and Columbia University, including by email or autodialed calls and text messages to any telephone number I provide, about my interest in furthering my career training. I understand my consent is not required to purchase or enroll. I also agree to the Terms of Use and Privacy Policy.</label></>
+        : null
+      }
+      {(props.count === 4) 
+        ? <h3>Success</h3>
+        : null
+      }
+      <ErrorMessage>{ props.errorMessage }</ErrorMessage>
+      {(props.count !== 4) 
+        ? <ButtonContainer count={ props.count }>
+            {(props.count > 0)
+              ?  <Button
+                  background='#000000'
+                  fontColor='#ffffff'
+                  bold
+                  type='button'
+                  onClick={ props.back }
+                >
+                  BACK
+                </Button>
+              : null
+            }
+            <Button
+              background='#76acdc'
+              bold
+              type='submit'
+              onClick={ props.next }
+            >
+              NEXT
+            </Button>
+          </ButtonContainer>
+        : null
+      }
+      <Progress value={ calculateProgress(props.count) } max="100" />
+    </Form>
+  </SSFContainer>
+)

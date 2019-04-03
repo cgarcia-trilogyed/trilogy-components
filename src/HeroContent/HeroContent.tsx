@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '../utils/styled-components';
 import { device } from '../utils/sizes';
-import SSForm from '../SSForm'
+import FormContainer from '../FormContainer'
 
 export interface ContentProps {
   title?: string;
@@ -64,7 +64,7 @@ const TitleContent = styled.div`
 
 export const HeroContent = (props: ContentProps) => (
   <Container>
-    <SSForm />>
+    <FormContainer />
     <TitleContent>
       <h1>{props.title}</h1>
       <h2>{props.leadText}</h2>
