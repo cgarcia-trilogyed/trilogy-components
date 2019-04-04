@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled from '../utils/styled-components';
 import { device } from '../utils/sizes';
-import FormContainer from '../FormContainer';
 
 export interface ContentProps {
-  leadText?: string;
   dateText?: string;
+  form?: React.ReactNode;
+  leadText?: string;
 }
 
 const Container = styled.div`
@@ -23,20 +23,6 @@ const Container = styled.div`
 `;
 
 /* font family from tailwind css by Adam Wathan https://tailwindcss.com/docs/fonts*/
-// const Form = styled.div`
-//   align-items: center;
-//   background: #fff;
-//   border-radius: 10px;
-//   display: flex;
-//   font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
-//     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-//   grid-area: form;
-//   justify-content: center;
-//   max-width: 400px;
-//   text-align: center;
-//   width: 100%;
-// `;
-/* font family from tailwind css by Adam Wathan https://tailwindcss.com/docs/fonts*/
 const TitleContent = styled.div`
   color: #fff;
   font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
@@ -53,12 +39,12 @@ const TitleContent = styled.div`
   }
 `;
 
-export const FooterContent = (props: ContentProps) => (
+export const FooterContent: React.FunctionComponent<ContentProps> = ({ dateText, form, leadText }) => (
   <Container>
-    <FormContainer />
+    { form }
     <TitleContent>
-      <h2>{props.leadText}</h2>
-      <p>{props.dateText}</p>
+      <h2>{leadText}</h2>
+      <p>{dateText}</p>
     </TitleContent>
   </Container>
 );

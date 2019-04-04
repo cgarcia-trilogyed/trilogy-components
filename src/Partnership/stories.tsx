@@ -16,6 +16,7 @@ stories.add('Default', () => (
       bottomText="Aliquam quis imp Aliquam quis imperdiet ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc auctor arcu arcu, et dictum libero elementum ut.erdiet ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc auctor arcu arcu, et dictum libero elementum ut."
       textColor={color('Text Color', '#fff')}
       topText="Aliquam quis imperdiet ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+      title="Lorem Ipsum Dolor Sit Amet"
     />
   </>
 ));

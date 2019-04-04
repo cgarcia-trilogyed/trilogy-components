@@ -5,6 +5,7 @@ import Hero from '.';
 import HeroContent from '../HeroContent';
 import FooterContent from '../FooterContent';
 import SectionTitle from '../SectionTitle';
+import FormContainer from '../FormContainer'
 
 const stories = storiesOf('Hero', module);
 
@@ -27,6 +28,7 @@ stories
         overlayShow={boolean('Show overlay', false)}
       >
         <HeroContent
+          form={ <FormContainer /> }
           title="Etiam Dolor Ac Ligula Laoreet Porta"
           leadText="QUISQUE SAGITTIS LOBORTIS LOREM SAGITTIS"
           dateText="Pellentesque volutpat felis ante. Pellentesque volutpat felis ante."
@@ -51,6 +53,7 @@ stories
         overlayShow={boolean('Show overlay', false)}
       >
         <FooterContent
+          form={ <FormContainer /> }
           leadText="Upcoming Start Dates"
           dateText="Online: April 22"
         />

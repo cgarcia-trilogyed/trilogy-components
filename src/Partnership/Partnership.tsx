@@ -7,6 +7,7 @@ export interface PartnershipProps {
   bottomText?: string;
   textColor?: string;
   topText?: string;
+  title?: string;
 }
 
 const PDiv = styled(`div`)<PartnershipProps>`
@@ -33,7 +34,7 @@ export const Partnership = (props: PartnershipProps) => (
     <GlobalStyles />
     <PDiv backgroundColor={props.backgroundColor} textColor={props.textColor}>
       <p>{props.topText}</p>
-      <TitleP>Lorem Ipsum Dolor Sit Amet</TitleP>
+      <TitleP>{ props.title }</TitleP>
       <BodyP>{props.bottomText}</BodyP>
     </PDiv>
   </>
