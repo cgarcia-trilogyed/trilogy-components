@@ -10,11 +10,11 @@ const stories = storiesOf('Image Text', module);
 stories.addDecorator(withKnobs);
 
 const ulList = `<ul>
-  <li>Over the course of 24 weeks, you’ll tap into a proven curriculum, learning front-end and back-end technologies in a self-paced, online format.</li>
-  <li>You will cover the fundamentals, getting immersed into building database-driven applications, the development process and structure, and then move on to applying those skills.</li>
-  <li>Once you’ve mastered the skills needed to be employable, you’ll put that knowledge into action on real-world situations.</li>
-  <li>Throughout the program, you’ll become part of a community of like-minded individuals and have the opportunity for collaboration on an agile team project, simulating a real professional environment.</li>
-  <li>You’ll receive 1:1 training through mentorship with an industry professional, technical feedback throughout each code exercise, and on-demand support from our Course Assistants if you get stuck.</li>
+  <li>Duis rutrum arcu mi, a venenatis orci tincidunt vitae. Mauris convallis pretium metus, sed laoreet nulla mollis at. Duis rutrum arcu mi.</li>
+  <li>Duis rutrum arcu mi, a venenatis orci tincidunt vitae. Mauris convallis pretium metus, sed laoreet nulla mollis at. Duis rutrum arcu mi, a venenatis orci tincidunt vitae.</li>
+  <li>Quisque sagittis lobortis lorem eu rutrum. Donec accumsan enim ut diam aliquam fermentum. Quisque sagittis lobortis lorem eu rutrum.</li>
+  <li>TVivamus eu leo ac magna accumsan maximus. Donec nec lacinia arcu. Sed consequat purus ac dui bibendum, nec scelerisque magna efficitur. Vivamus eu leo ac magna accumsan maximus.</li>
+  <li>Donec lobortis semper faucibus. Integer ac pulvinar justo, suscipit venenatis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
   </ul>`;
 
 stories.add('Default', () => (
@@ -23,8 +23,8 @@ stories.add('Default', () => (
     <ImageText
       alt="A picture is worth a thousand words"
       src="https://bootcamp.cvn.columbia.edu/wp-content/uploads/sites/99/2019/02/become.jpg"
-      title="Become a Web Developer—from Anywhere"
-      subtitle="Why join our program?"
+      title="Donec lobortis Semper Faucibus"
+      subtitle="Parturient montes nascetur?"
       imageRight={boolean('Image Right', false)}
       content={<List listHTML={ulList} />}
       dskColumWidth={text(

@@ -27,9 +27,9 @@ stories
         overlayShow={boolean('Show overlay', false)}
       >
         <HeroContent
-          title="Columbia Engineering Coding Boot Camp | ONLINE"
-          leadText="BECOME A WEB DEVELOPER IN 24 WEEKS"
-          dateText="Self-paced, mentor-led instruction in an online format for busy adults"
+          title="Etiam Dolor Ac Ligula Laoreet Porta"
+          leadText="QUISQUE SAGITTIS LOBORTIS LOREM SAGITTIS"
+          dateText="Pellentesque volutpat felis ante. Pellentesque volutpat felis ante."
         />
       </Hero>
     </>

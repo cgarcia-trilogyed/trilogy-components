@@ -33,7 +33,7 @@ export const Partnership = (props: PartnershipProps) => (
     <GlobalStyles />
     <PDiv backgroundColor={props.backgroundColor} textColor={props.textColor}>
       <p>{props.topText}</p>
-      <TitleP>About Trilogy Education Services</TitleP>
+      <TitleP>Lorem Ipsum Dolor Sit Amet</TitleP>
       <BodyP>{props.bottomText}</BodyP>
     </PDiv>
   </>

@@ -17,7 +17,7 @@ stories.add('Default', () => (
         'Background Image',
         'https://bootcamp.cvn.columbia.edu/wp-content/uploads/sites/99/2019/02/img_about.jpg'
       )}
-      content="The mission of The Fu Foundation School of Engineering and Applied Science is to expand knowledge and advance technology through research, while educating students to become leaders informed by an engineering foundation. Enriched with the intellectual resources of a global university in the City of New York, we push disciplinary frontiers, confront complex issues, and engineer innovative solutions to address the grand challenges of our time. We create a collaborative environment that embraces interdisciplinary thought, integrated entrepreneurship, cultural awareness, and social responsibility, and advances the translation of ideas into practical innovations."
+      content="Duis rutrum arcu mi, a venenatis orci tincidunt vitae. Mauris convallis pretium metus, sed laoreet nulla mollis at. Pellentesque sodales rhoncus dolor, in vulputate nulla sagittis eget. Morbi ac nisi malesuada, tristique risus in, porttitor diam. Maecenas a orci consectetur nibh vehicula viverra non non turpis. Phasellus sagittis interdum condimentum. Suspendisse gravida velit a ex consequat eleifend. Nunc interdum in felis at semper. Aliquam quis imperdiet ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc auctor arcu arcu, et dictum libero elementum ut. Quisque sagittis lobortis lorem eu rutrum. Donec accumsan enim ut diam aliquam fermentum."
       mobileImage={text(
         'Mobile Image',
         'https://bootcamp.cvn.columbia.edu/wp-content/uploads/sites/99/2019/02/about_m.jpg'
@@ -27,7 +27,7 @@ stories.add('Default', () => (
         'rgba(0, 0, 0, 0.5)'
       )}
       overlayShow={boolean('Show overlay', false)}
-      title="About Columbia Engineering"
+      title="Title Goes Here"
     />
   </>
 ));

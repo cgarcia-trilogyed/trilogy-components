@@ -134,12 +134,7 @@ export const SSForm = (props: FormProps) => (
               id="termsAndConditions"
               type="checkbox"
             />
-            By checking this box, I consent to be contacted by or on behalf of
-            Trilogy Education Services, Inc. and Columbia University, including
-            by email or autodialed calls and text messages to any telephone
-            number I provide, about my interest in furthering my career
-            training. I understand my consent is not required to purchase or
-            enroll. I also agree to the Terms of Use and Privacy Policy.
+            Integer ac pulvinar justo, suscipit venenatis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque volutpat felis ante. Integer ac pulvinar justo, suscipit venenatis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque volutpat felis ante.
           </label>
         </>
       ) : null}
