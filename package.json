@@ -5,7 +5,8 @@
   "main": "core/index.js",
   "types": "core/index.d.ts",
   "repository": "https://github.com/Harrison1/trilogy-components",
-  "author": "Trilogy Team",
+  "homepage": "https://harrison1.github.io/trilogy-components/",
+  "author": "Harrison McGuire",
   "license": "MIT",
   "keywords": [
     "Trilogy",
