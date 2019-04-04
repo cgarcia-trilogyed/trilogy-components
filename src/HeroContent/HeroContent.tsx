@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '../utils/styled-components';
 import { device } from '../utils/sizes';
-import FormContainer from '../FormContainer'
+import FormContainer from '../FormContainer';
 
 export interface ContentProps {
   title?: string;

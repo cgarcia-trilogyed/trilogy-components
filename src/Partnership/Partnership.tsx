@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '../utils/styled-components';
-import GlobalStyles from '../GlobalStyles'
+import GlobalStyles from '../GlobalStyles';
 
 export interface PartnershipProps {
   backgroundColor?: string;
@@ -22,11 +22,11 @@ const TitleP = styled.p`
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 0;
-`
+`;
 
 const BodyP = styled.p`
   margin-top: 0;
-`
+`;
 
 export const Partnership = (props: PartnershipProps) => (
   <>

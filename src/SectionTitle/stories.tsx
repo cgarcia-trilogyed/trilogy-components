@@ -9,7 +9,7 @@ stories.addDecorator(withKnobs);
 
 stories.add('Default', () => (
   <>
-    <SectionTitle text='Section Title' bold />
+    <SectionTitle text="Section Title" bold />
     <SectionTitle
       bold={boolean('Bold Font', false)}
       text={text('Title Text', 'Become a Web Developer—from Anywhere')}

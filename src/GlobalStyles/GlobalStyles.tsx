@@ -24,4 +24,4 @@ export const GlobalStyles = createGlobalStyle`
     text-align: left;
     background-color: #fff;
   }
-`
+`;

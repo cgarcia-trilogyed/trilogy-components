@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '../utils/styled-components';
-import GlobalStyles from '../GlobalStyles'
+import GlobalStyles from '../GlobalStyles';
 
 export interface ListProps {
   bulletColor?: string;

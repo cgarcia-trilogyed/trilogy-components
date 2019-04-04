@@ -3,7 +3,7 @@ import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import Faq from '.';
 import ImageText from '../ImageText';
-import SectionTitle from '../SectionTitle'
+import SectionTitle from '../SectionTitle';
 
 const stories = storiesOf('Faq', module);
 
@@ -53,13 +53,13 @@ const faqList = [
 stories
   .add('Default', () => (
     <>
-      <SectionTitle text='Frequently Asked Questions' bold />
+      <SectionTitle text="Frequently Asked Questions" bold />
       <Faq content={faqList} />
     </>
   ))
   .add('Image Text', () => (
     <>
-      <SectionTitle text='FAQ Section' bold />
+      <SectionTitle text="FAQ Section" bold />
       <ImageText
         src="https://bootcamp.cvn.columbia.edu/wp-content/uploads/sites/99/2019/02/faq.jpg"
         title="Frequently Asked Questions"

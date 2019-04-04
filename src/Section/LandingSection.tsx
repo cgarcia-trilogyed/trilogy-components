@@ -14,9 +14,7 @@ const Section = styled.section`
   @media ${device.tabletL} {
     margin: 90px 0;
   }
-`
-export const LandingSection: React.FunctionComponent<Props> = ({ children }) => (
-  <Section>
-    { children }
-  </Section>
-)
+`;
+export const LandingSection: React.FunctionComponent<Props> = ({
+  children
+}) => <Section>{children}</Section>;

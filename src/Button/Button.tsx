@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '../utils/styled-components';
-import GlobalStyles from '../GlobalStyles'
+import GlobalStyles from '../GlobalStyles';
 
 type ButtonType = 'button' | 'reset' | 'submit' | undefined;
 
@@ -21,7 +21,8 @@ export interface ButtonProps {
 }
 
 const TButton = styled(`button`)<ButtonProps>`
-  background-color: ${props => (props.background ? props.background : '#28c8e5')};
+  background-color: ${props =>
+    props.background ? props.background : '#28c8e5'};
   border: none;
   color: ${props => (props.fontColor ? props.fontColor : '#fff')};
   cursor: pointer;
@@ -30,7 +31,8 @@ const TButton = styled(`button`)<ButtonProps>`
   height: 48px;
   width: 100%;
   :hover {
-    background-color: ${props => (props.background ? `${props.background}99` : '#28c8e575')};
+    background-color: ${props =>
+      props.background ? `${props.background}99` : '#28c8e575'};
   }
 `;
 
