@@ -10,8 +10,7 @@ export interface SectionTitleProps {
 /* font family from tailwind css by Adam Wathan https://tailwindcss.com/docs/fonts*/
 const Title = styled(`h2`)<SectionTitleProps>`
   color: ${props => (props.color ? props.color : '#333')};
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 36px;
   font-weight: ${props => (props.bold ? `700` : `400`)};
   line-height: 40px;

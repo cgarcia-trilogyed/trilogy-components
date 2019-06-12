@@ -20,16 +20,14 @@ const Container = styled(`div`)<ITProps>`
   max-width: 1200px;
   width: 100%;
   @media ${device.laptop} {
-    grid-template-areas: ${props =>
-      props.imageRight
-        ? `'title image' 'list image'`
-        : `'image title' 'image list'`};
-    grid-template-columns: ${props =>
-      props.dskColumWidth ? props.dskColumWidth : `50%`};
+    grid-template-areas: ${props => props.imageRight ? `'title image' 'list image'` : `'image title' 'image list'`};
+    grid-template-columns: ${props => props.dskColumWidth ? props.dskColumWidth : `50%`};
     ${props => (props.imageRight ? `justify-content: space-between;` : null)}
     ${props => (props.imageRight ? `justify-items: end;;` : null)}
+    grid-template-rows: auto 1fr;
   }
   h2 {
+    line-height: 1.3;
     margin-bottom: 0;
   }
 `;

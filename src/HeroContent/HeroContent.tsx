@@ -27,8 +27,7 @@ const Container = styled.div`
 /* font family from tailwind css by Adam Wathan https://tailwindcss.com/docs/fonts*/
 const TitleContent = styled.div`
   color: #fff;
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   grid-area: content;
   text-align: center;
   h1 {

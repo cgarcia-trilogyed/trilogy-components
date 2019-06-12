@@ -25,10 +25,7 @@ const AboutContainer = styled(`div`)<AboutProps>`
   padding: 20px;
   position: relative;
   @media ${device.tablet} {
-    background-image: url(${props =>
-      props.backgroundImg
-        ? props.backgroundImg
-        : `https://via.placeholder.com/1300x500/AA00FF/fff.png`});
+    background-image: url(${props => props.backgroundImg ? props.backgroundImg : `https://via.placeholder.com/1300x500/AA00FF/fff.png`});
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,9 +33,7 @@ const AboutContainer = styled(`div`)<AboutProps>`
   ${props =>
     props.overlayShow
       ? `&:before {
-          background: ${
-            props.overlayColor ? props.overlayColor : 'rgba(0, 0, 0, 0.5)'
-          };
+          background: ${ props.overlayColor ? props.overlayColor : 'rgba(0, 0, 0, 0.5)' };
           content: '';
           height: 100%;
           left: 0;

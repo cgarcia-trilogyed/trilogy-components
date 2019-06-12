@@ -11,8 +11,7 @@ export interface PartnershipProps {
 }
 
 const PDiv = styled(`div`)<PartnershipProps>`
-  background-color: ${props =>
-    props.backgroundColor ? props.backgroundColor : `#000`};
+  background-color: ${props => props.backgroundColor ? props.backgroundColor : `#000`};
   color: ${props => (props.textColor ? props.textColor : `#fff`)};
   font-size: 1.6rem;
   max-width: 1200px;

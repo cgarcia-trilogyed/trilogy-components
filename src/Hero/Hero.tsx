@@ -12,10 +12,7 @@ export interface HeroProps {
 }
 
 const HeroContainer = styled(`div`)<HeroProps>`
-  background-image: url(${props =>
-    props.backgroundImgM
-      ? props.backgroundImgM
-      : `https://via.placeholder.com/768x580/1565C0/fff.png`});
+  background-image: url(${props => props.backgroundImgM ? props.backgroundImgM : `https://via.placeholder.com/768x580/1565C0/fff.png`});
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,17 +20,12 @@ const HeroContainer = styled(`div`)<HeroProps>`
   position: relative;
   width: 100%;
   @media ${device.laptop} {
-    background-image: url(${props =>
-      props.backgroundImg
-        ? props.backgroundImg
-        : `https://via.placeholder.com/1300x500/AA00FF/fff.png`});
+    background-image: url(${props => props.backgroundImg ? props.backgroundImg : `https://via.placeholder.com/1300x500/AA00FF/fff.png`});
   }
   ${props =>
     props.overlayShow
       ? `&:before {
-          background: ${
-            props.overlayColor ? props.overlayColor : 'rgba(0, 0, 0, 0.5)'
-          };
+          background: ${props.overlayColor ? props.overlayColor : 'rgba(0, 0, 0, 0.5)'};
           content: '';
           height: 100%;
           left: 0;

@@ -9,11 +9,9 @@ export interface QuoteProps {
 
 /* font family from tailwind css by Adam Wathan https://tailwindcss.com/docs/fonts*/
 const QDiv = styled(`div`)<QuoteProps>`
-  background-color: ${props =>
-    props.backgroundColor ? props.backgroundColor : '#000'};
+  background-color: ${props => props.backgroundColor ? props.backgroundColor : '#000'};
   color: ${props => (props.textColor ? props.textColor : '#fff')};
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 24px;
   line-height: 36px;
   text-align: center;

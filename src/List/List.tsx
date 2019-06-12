@@ -53,16 +53,13 @@ const Container = styled(`div`)<ListProps>`
           padding-left: 10px;
           position: relative;
           &:before {
-            color: ${props =>
-              props.innerBulletColor ? props.innerBulletColor : '#F00'};
+            color: ${props => props.innerBulletColor ? props.innerBulletColor : '#F00'};
             vertical-align: middle;
             display: inline-block;
             position: absolute;
-            font-size: ${props =>
-              props.innerFontSize ? props.innerFontSize : '12px'};
+            font-size: ${props => props.innerFontSize ? props.innerFontSize : '12px'};
             width: ${props => (props.innerWidth ? props.innerWidth : '10px')};
-            height: ${props =>
-              props.innerHeight ? props.innerHeight : '10px'};
+            height: ${props => props.innerHeight ? props.innerHeight : '10px'};
             top: ${props => (props.innerTop ? props.innerTop : '2px')};
             left: ${props => (props.innerLeft ? props.innerLeft : '2px')};
           }

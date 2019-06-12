@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from '../utils/styled-components';
 import GlobalStyles from '../GlobalStyles';
+import setRGBA from '../utils/setRGBA'
 
 type ButtonType = 'button' | 'reset' | 'submit' | undefined;
 
@@ -31,8 +32,7 @@ const TButton = styled(`button`)<ButtonProps>`
   height: 48px;
   width: 100%;
   :hover {
-    background-color: ${props =>
-      props.background ? `${props.background}99` : '#28c8e575'};
+    background-color: ${props => props.background ? setRGBA(props.background) : '#28c8e5BF'};
   }
 `;
 
